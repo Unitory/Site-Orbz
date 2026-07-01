@@ -7,6 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Tire suas dúvidas sobre os serviços da Orbz: branding, UX/UI design, desenvolvimento web e sistemas SaaS.">
+    <meta property="og:title" content="Perguntas Frequentes — Orbz">
+    <meta property="og:description" content="Tire suas dúvidas sobre os serviços da Orbz: branding, UX/UI, sites e sistemas SaaS.">
+    <meta property="og:image" content="https://orbzsolutions.com.br/assets/img/logo-orbz/simbolo-roxo.svg">
+    <meta property="og:url" content="https://orbzsolutions.com.br/faq.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Orbz">
+    <meta name="twitter:card" content="summary_large_image">
 
     <!-- ========== Page Title ========== -->
     <title>Orbz - Dúvidas Frequentes</title>
@@ -36,22 +43,13 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
 
-    <!-- Start Preloader 
+    <!-- Start Preloader
     ============================================= -->
     <div id="preloader">
-        <div class="robok-loader-inner">
-           <div class="robok-loader">
-              <span class="robok-loader-item"></span>
-              <span class="robok-loader-item"></span>
-              <span class="robok-loader-item"></span>
-              <span class="robok-loader-item"></span>
-              <span class="robok-loader-item"></span>
-              <span class="robok-loader-item"></span>
-              <span class="robok-loader-item"></span>
-              <span class="robok-loader-item"></span>
-           </div>
-        </div>
-     </div>
+        <video autoplay muted playsinline id="loader-video">
+            <source src="assets/load.mp4" type="video/mp4">
+        </video>
+    </div>
     <!-- preloader end -->
 
     <!-- Header 
@@ -69,7 +67,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <a class="navbar-brand" href="index.html">
-                        <img src="assets/img/logo-orbz/logo-branco.svg" class="logo" alt="Logo">
+                        <img src="assets/img/logo-orbz/logo-roxo.svg" class="logo" alt="Logo">
                     </a>
                 </div>
                 <!-- End Header Navigation -->
@@ -77,12 +75,13 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
 
-                    <img src="assets/img/logo-orbz/logo-branco.svg" alt="Logo">
+                    <img src="assets/img/logo-orbz/logo-roxo.svg" alt="Logo">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                         <i class="fa fa-times"></i>
                     </button>
-                    
+
                     <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="about-us.html">Sobre nós</a></li>
                         <li><a href="services-4.html">Serviços</a></li>
                         <li><a href="project.html">Portfolio</a></li>
@@ -311,6 +310,27 @@
     
     <!-- jQuery Frameworks
     ============================================= -->
+    <script>
+(function() {
+    var preloader = document.getElementById('preloader');
+    var video = document.getElementById('loader-video');
+
+    function hideLoader() {
+        preloader.classList.add('fade-out');
+        setTimeout(function() {
+            preloader.style.display = 'none';
+        }, 500);
+    }
+
+    if (video) {
+        video.addEventListener('ended', hideLoader);
+        // fallback: esconde após 4s caso o vídeo não carregue
+        setTimeout(hideLoader, 4000);
+    } else {
+        window.addEventListener('load', hideLoader);
+    }
+})();
+    </script>
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery.appear.js"></script>

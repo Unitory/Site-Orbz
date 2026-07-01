@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,6 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Conteúdo sobre branding, UX/UI design e tecnologia para negócios que querem crescer no digital.">
+    <meta property="og:title" content="Blog — Orbz">
+    <meta property="og:description" content="Conteúdo sobre branding, design e tecnologia. Artigos da Orbz para marcas que querem crescer no digital.">
+    <meta property="og:image" content="https://orbzsolutions.com.br/assets/Blog-identidade.png">
+    <meta property="og:url" content="https://orbzsolutions.com.br/blog-with-sidebar.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Orbz">
+    <meta name="twitter:card" content="summary_large_image">
 
     <!-- ========== Page Title ========== -->
     <title>Orbz - Blog</title>
@@ -36,22 +44,13 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
 
-    <!-- Start Preloader 
+    <!-- Start Preloader
     ============================================= -->
     <div id="preloader">
-        <div class="robok-loader-inner">
-           <div class="robok-loader">
-              <span class="robok-loader-item"></span>
-              <span class="robok-loader-item"></span>
-              <span class="robok-loader-item"></span>
-              <span class="robok-loader-item"></span>
-              <span class="robok-loader-item"></span>
-              <span class="robok-loader-item"></span>
-              <span class="robok-loader-item"></span>
-              <span class="robok-loader-item"></span>
-           </div>
-        </div>
-     </div>
+        <video autoplay muted playsinline id="loader-video">
+            <source src="assets/load.mp4" type="video/mp4">
+        </video>
+    </div>
     <!-- preloader end -->
 
     <!-- Header 
@@ -69,7 +68,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <a class="navbar-brand" href="index.html">
-                        <img src="assets/img/logo-orbz/logo-branco.svg" class="logo" alt="Logo">
+                        <img src="assets/img/logo-orbz/logo-roxo.svg" class="logo" alt="Logo">
                     </a>
                 </div>
                 <!-- End Header Navigation -->
@@ -77,12 +76,13 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
 
-                    <img src="assets/img/logo-orbz/logo-branco.svg" alt="Logo">
+                    <img src="assets/img/logo-orbz/logo-roxo.svg" alt="Logo">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                         <i class="fa fa-times"></i>
                     </button>
                     
                     <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="about-us.html">Sobre nós</a></li>
                         <li><a href="services-4.html">Serviços</a></li>
                         <li><a href="project.html">Portfolio</a></li>
@@ -141,93 +141,73 @@
                 <div class="row">
                     <div class="blog-content col-xl-8 col-lg-7 col-md-12 pr-35 pr-md-15 pl-md-15 pr-xs-15 pl-xs-15">
                         <div class="blog-item-box">
-                            <!-- Single Item -->
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="blog-single-with-sidebar.html"><img src="assets/img/blog/v1.jpg" alt="Thumb"></a>
-                            </div>
-                            <div class="info">
-                                <div class="meta">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="far fa-calendar-alt"></i> 10 Janeiro, 2026</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="far fa-user-circle"></i> Orbz</a>
-                                        </li>
-                                    </ul>
+                            <!-- Post 1 -->
+                            <div class="blog-style-one-item">
+                                <div class="thumb">
+                                    <a href="blog-single-with-sidebar.html">
+                                        <img src="assets/Blog-identidade.png" alt="Identidade Visual">
+                                    </a>
                                 </div>
-                                <h2><a href="blog-single-with-sidebar.html">Por que uma identidade visual forte é o primeiro passo para vender mais</a></h2>
-                                <p>
-                                    Muitas empresas investem em anúncios antes de ter uma identidade consolidada. O resultado é previsível: verba gasta, marca esquecida. Entenda por que o branding vem antes de qualquer estratégia de crescimento.
-                                </p>
-                                <a class="btn mt-10 btn-style-one" href="blog-single-with-sidebar.html">Ler Mais <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        <!-- Single Item -->
-                        <!-- Single Item -->
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="blog-single-with-sidebar.html"><img src="assets/img/blog/v2.jpg" alt="Thumb"></a>
-                            </div>
-                            <div class="info">
-                                <div class="meta">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="far fa-calendar-alt"></i> 18 Março, 2026</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="far fa-user-circle"></i> Orbz</a>
-                                        </li>
+                                <div class="info">
+                                    <div class="tags">
+                                        <a href="#">Branding</a>
+                                    </div>
+                                    <ul class="blog-meta">
+                                        <li><i class="fas fa-calendar-alt"></i> 10 Janeiro, 2026</li>
+                                        <li><i class="fas fa-user"></i> Orbz</li>
                                     </ul>
+                                    <h3><a href="blog-single-with-sidebar.html">Por que uma identidade visual forte é o primeiro passo para vender mais</a></h3>
+                                    <p>Muitas empresas investem em anúncios antes de ter uma identidade consolidada. O resultado é previsível: verba gasta, marca esquecida. Entenda por que o branding vem antes de qualquer estratégia de crescimento.</p>
+                                    <a href="blog-single-with-sidebar.html" class="btn-simple">Ler Mais <i class="fas fa-arrow-right"></i></a>
                                 </div>
-                                <h2><a href="blog-single-with-sidebar.html">O que é UX Design e por que ele impacta diretamente a conversão do seu site</a></h2>
-                                <p>
-                                    UX não é só sobre deixar algo bonito. É sobre fazer o usuário encontrar o que precisa sem esforço — e isso tem impacto direto em vendas, retenção e reputação da sua marca digital.
-                                </p>
-                                <a class="btn mt-10 btn-style-one" href="blog-single-with-sidebar.html">Ler Mais <i class="fas fa-arrow-right"></i></a>
                             </div>
-                        </div>
-                        <!-- Single Item -->
-                        <!-- Single Item -->
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="blog-single-with-sidebar.html"><img src="assets/img/blog/v3.jpg" alt="Thumb"></a>
-                            </div>
-                            <div class="info">
-                                <div class="meta">
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="far fa-calendar-alt"></i> 05 Maio, 2026</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="far fa-user-circle"></i> Orbz</a>
-                                        </li>
+
+                            <!-- Post 2 -->
+                            <div class="blog-style-one-item">
+                                <div class="thumb">
+                                    <a href="blog-single-with-sidebar.html">
+                                        <img src="assets/Blog-ux.png" alt="UX Design">
+                                    </a>
+                                </div>
+                                <div class="info">
+                                    <div class="tags">
+                                        <a href="#">UX/UI Design</a>
+                                    </div>
+                                    <ul class="blog-meta">
+                                        <li><i class="fas fa-calendar-alt"></i> 18 Março, 2026</li>
+                                        <li><i class="fas fa-user"></i> Orbz</li>
                                     </ul>
+                                    <h3><a href="blog-single-with-sidebar.html">O que é UX Design e por que ele impacta diretamente a conversão do seu site</a></h3>
+                                    <p>UX não é só sobre deixar algo bonito. É sobre fazer o usuário encontrar o que precisa sem esforço — e isso tem impacto direto em vendas, retenção e reputação da sua marca digital.</p>
+                                    <a href="blog-single-with-sidebar.html" class="btn-simple">Ler Mais <i class="fas fa-arrow-right"></i></a>
                                 </div>
-                                <h2><a href="blog-single-with-sidebar.html">Site institucional ou landing page: qual o melhor para o seu negócio?</a></h2>
-                                <p>
-                                    A resposta depende do seu objetivo. Se você quer gerar leads rapidamente, a landing page ganha. Se quer construir autoridade e confiança no longo prazo, o site institucional é insubstituível.
-                                </p>
-                                <a class="btn mt-10 btn-style-one" href="blog-single-with-sidebar.html">Ler Mais <i class="fas fa-arrow-right"></i></a>
                             </div>
-                        </div>
-                        <!-- Single Item -->
+
+                            <!-- Post 3 -->
+                            <div class="blog-style-one-item">
+                                <div class="thumb">
+                                    <a href="blog-single-with-sidebar.html">
+                                        <img src="assets/Blog-sites.png" alt="Sites">
+                                    </a>
+                                </div>
+                                <div class="info">
+                                    <div class="tags">
+                                        <a href="#">Tecnologia</a>
+                                    </div>
+                                    <ul class="blog-meta">
+                                        <li><i class="fas fa-calendar-alt"></i> 05 Maio, 2026</li>
+                                        <li><i class="fas fa-user"></i> Orbz</li>
+                                    </ul>
+                                    <h3><a href="blog-single-with-sidebar.html">Site institucional ou landing page: qual o melhor para o seu negócio?</a></h3>
+                                    <p>A escolha entre um site completo e uma landing page pode definir o sucesso da sua presença digital. Entenda as diferenças, vantagens e quando usar cada um.</p>
+                                    <a href="blog-single-with-sidebar.html" class="btn-simple">Ler Mais <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
                         </div>
                         
                         <!-- Pagination -->
-                        <div class="row">
-                            <div class="col-md-12 pagi-area text-center">
-                                <nav aria-label="navigation">
-                                    <ul class="pagination">
-                                        <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-left"></i></a></li>
-                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                        <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-right"></i></a></li>
-                                    </ul>
-                                </nav>
-                            </div>
+                        <div class="pager-area mt-40 text-center">
+                            <p style="color: rgba(255,255,255,0.4); font-size: 0.9rem;">Mostrando 3 de 3 artigos</p>
                         </div>
                     </div>
 
@@ -247,42 +227,24 @@
                                 <h4 class="title">Posts Recentes</h4>
                                 <ul>
                                     <li>
-                                        <div class="thumb">
-                                            <a href="blog-single-with-sidebar.html">
-                                                <img src="assets/img/gallery/6.jpg" alt="Thumb">
-                                            </a>
-                                        </div>
+                                        <div class="thumb"><img src="assets/Blog-identidade.png" alt="Identidade Visual"></div>
                                         <div class="info">
-                                            <div class="meta-title">
-                                                <span class="post-date">12 Feb, 2025</span>
-                                            </div>
-                                            <a href="blog-single-with-sidebar.html">Commanded household smallness delivered.</a>
+                                            <span>10 Jan, 2026</span>
+                                            <h5><a href="blog-single-with-sidebar.html">Por que uma identidade visual forte é o primeiro passo para vender mais</a></h5>
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="thumb">
-                                            <a href="blog-single-with-sidebar.html">
-                                                <img src="assets/img/gallery/7.jpg" alt="Thumb">
-                                            </a>
-                                        </div>
+                                        <div class="thumb"><img src="assets/Blog-ux.png" alt="UX Design"></div>
                                         <div class="info">
-                                            <div class="meta-title">
-                                                <span class="post-date">05 Jul, 2025</span>
-                                            </div>
-                                            <a href="blog-single-with-sidebar.html">Future Plan & Strategy for Consutruction </a>
+                                            <span>18 Mar, 2026</span>
+                                            <h5><a href="blog-single-with-sidebar.html">O que é UX Design e por que ele impacta a conversão do seu site</a></h5>
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="thumb">
-                                            <a href="blog-single-with-sidebar.html">
-                                                <img src="assets/img/gallery/8.jpg" alt="Thumb">
-                                            </a>
-                                        </div>
+                                        <div class="thumb"><img src="assets/Blog-sites.png" alt="Sites"></div>
                                         <div class="info">
-                                            <div class="meta-title">
-                                                <span class="post-date">29 Aug, 2025</span>
-                                            </div>
-                                            <a href="blog-single-with-sidebar.html">Melancholy particular devonshire alteration</a>
+                                            <span>05 Mai, 2026</span>
+                                            <h5><a href="blog-single-with-sidebar.html">Site institucional ou landing page: qual o melhor?</a></h5>
                                         </div>
                                     </li>
                                 </ul>
@@ -290,97 +252,12 @@
                             <div class="sidebar-item category">
                                 <h4 class="title">Categorias</h4>
                                 <div class="sidebar-info">
-                                    <ul>
-                                        <li>
-                                            <a href="#">national <span>69</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#">national <span>25</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#">sports <span>18</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#">megazine <span>37</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#">health <span>12</span></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="sidebar-item gallery">
-                                <h4 class="title">Gallery</h4>
-                                <div class="sidebar-info">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <img src="assets/img/gallery/11.jpg" alt="thumb">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="assets/img/gallery/10.jpg" alt="thumb">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="assets/img/gallery/9.jpg" alt="thumb">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="assets/img/gallery/8.jpg" alt="thumb">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="assets/img/gallery/7.jpg" alt="thumb">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="assets/img/gallery/6.jpg" alt="thumb">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="sidebar-item archives">
-                                <h4 class="title">Archives</h4>
-                                <div class="sidebar-info">
-                                    <ul>
-                                        <li><a href="#">Aug 2025</a></li>
-                                        <li><a href="#">Sept 2025</a></li>
-                                        <li><a href="#">Nov 2025</a></li>
-                                        <li><a href="#">Dec 2025</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="sidebar-item social-sidebar">
-                                <h4 class="title">follow us</h4>
-                                <div class="sidebar-info">
-                                    <ul>
-                                        <li class="facebook">
-                                            <a href="#">
-                                                <i class="fab fa-facebook-f"></i>
-                                            </a>
-                                        </li>
-                                        <li class="twitter">
-                                            <a href="#">
-                                                <i class="fab fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li class="pinterest">
-                                            <a href="#">
-                                                <i class="fab fa-pinterest"></i>
-                                            </a>
-                                        </li>
-                                        <li class="linkedin">
-                                            <a href="#">
-                                                <i class="fab fa-linkedin-in"></i>
-                                            </a>
-                                        </li>
+                                    <ul class="catagory-list">
+                                        <li><a href="#">Branding <span>1</span></a></li>
+                                        <li><a href="#">UX/UI Design <span>1</span></a></li>
+                                        <li><a href="#">Tecnologia <span>1</span></a></li>
+                                        <li><a href="#">Identidade Visual <span>0</span></a></li>
+                                        <li><a href="#">Desenvolvimento <span>0</span></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -447,16 +324,16 @@
                                     <h4 class="widget-title">Acesso Rápido</h4>
                                     <ul>
                                         <li>
-                                            <a href="about-us.html">About</a>
+                                            <a href="about-us.html">Sobre nós</a>
                                         </li>
                                         <li>
-                                            <a href="about-us-2.html">Expertise</a>
+                                            <a href="services-4.html">Serviços</a>
                                         </li>
                                         <li>
-                                            <a href="about-us.html">Sustainability</a>
+                                            <a href="project.html">Portfolio</a>
                                         </li>
                                         <li>
-                                            <a href="blog-with-sidebar.html">News & Media</a>
+                                            <a href="contact-us.html">Contato</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -468,16 +345,16 @@
                                     <h4 class="widget-title">Serviços</h4>
                                     <ul>
                                         <li>
-                                            <a href="services-details.html">Machine Learning</a>
+                                            <a href="#">Branding</a>
                                         </li>
                                         <li>
-                                            <a href="services-details.html">Chatboot</a>
+                                            <a href="#">UX/UI Design</a>
                                         </li>
                                         <li>
-                                            <a href="services-details.html">Ai Development</a>
+                                            <a href="#">Sites & Desenvolvimento</a>
                                         </li>
                                         <li>
-                                            <a href="services-details.html">Data Science</a>
+                                            <a href="#">Sistemas SaaS</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -486,14 +363,14 @@
                             <!-- Single Item -->
                             <div class="col-lg-4">
                                 <div class="f-item contact">
-                                    <h4 class="widget-title"> Contact</h4>
+                                    <h4 class="widget-title">Contato</h4>
                                     <ul class="contact">
                                         <li>
                                             <p>Telefone</p>
                                             <h4><a href="tel:+5514998042458">(14) 99804-2458</a></h4>
                                         </li>
                                         <li>
-                                            <p>Email</p>
+                                            <p>E-mail</p>
                                             <h4><a href="mailto:orbzsolutions@gmail.com">orbzsolutions@gmail.com</a></h4>
                                         </li>
                                     </ul>
@@ -510,21 +387,8 @@
         <div class="footer-bottom">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
-                        <p>© 2026 Agência Orbz. Todos os direitos reservados.</p>
-                    </div>
-                    <div class="col-lg-6 text-end">
-                        <ul>
-                            <li>
-                                <a href="about-us.html">Terms</a>
-                            </li>
-                            <li>
-                                <a href="about-us.html">Privacy</a>
-                            </li>
-                            <li>
-                                <a href="contact-us.html">Support</a>
-                            </li>
-                        </ul>
+                    <div class="col-lg-12 text-center">
+                        <p>© 2026 <a href="index.html">Agência Orbz</a>. Todos os direitos reservados.</p>
                     </div>
                 </div>
             </div>
@@ -536,6 +400,27 @@
     
     <!-- jQuery Frameworks
     ============================================= -->
+    <script>
+(function() {
+    var preloader = document.getElementById('preloader');
+    var video = document.getElementById('loader-video');
+
+    function hideLoader() {
+        preloader.classList.add('fade-out');
+        setTimeout(function() {
+            preloader.style.display = 'none';
+        }, 500);
+    }
+
+    if (video) {
+        video.addEventListener('ended', hideLoader);
+        // fallback: esconde após 4s caso o vídeo não carregue
+        setTimeout(hideLoader, 4000);
+    } else {
+        window.addEventListener('load', hideLoader);
+    }
+})();
+    </script>
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery.appear.js"></script>

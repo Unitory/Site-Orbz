@@ -7,6 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Conheça os projetos da Orbz: branding, UX/UI design, sites institucionais e sistemas SaaS.">
+    <meta property="og:title" content="Portfolio — Orbz">
+    <meta property="og:description" content="Conheça os projetos da Orbz: branding, UX/UI design, sites institucionais e sistemas SaaS para marcas reais.">
+    <meta property="og:image" content="https://orbzsolutions.com.br/assets/Portfolio/calm-down.jpg">
+    <meta property="og:url" content="https://orbzsolutions.com.br/project.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Orbz">
+    <meta name="twitter:card" content="summary_large_image">
 
     <!-- ========== Page Title ========== -->
     <title>Orbz - Portfolio</title>
@@ -30,28 +37,19 @@
 
 </head>
 
-<body class="smooth-scroll-yes">
+<body class="smooth-scroll-yes bg-dark">
 
     <!--[if lte IE 9]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
 
-    <!-- Start Preloader 
+    <!-- Start Preloader
     ============================================= -->
     <div id="preloader">
-        <div class="robok-loader-inner">
-           <div class="robok-loader">
-              <span class="robok-loader-item"></span>
-              <span class="robok-loader-item"></span>
-              <span class="robok-loader-item"></span>
-              <span class="robok-loader-item"></span>
-              <span class="robok-loader-item"></span>
-              <span class="robok-loader-item"></span>
-              <span class="robok-loader-item"></span>
-              <span class="robok-loader-item"></span>
-           </div>
-        </div>
-     </div>
+        <video autoplay muted playsinline id="loader-video">
+            <source src="assets/load.mp4" type="video/mp4">
+        </video>
+    </div>
     <!-- preloader end -->
 
     <!-- Header 
@@ -83,6 +81,7 @@
                     </button>
                     
                     <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="about-us.html">Sobre nós</a></li>
                         <li><a href="services-4.html">Serviços</a></li>
                         <li><a href="project.html">Portfolio</a></li>
@@ -115,194 +114,143 @@
         <!-- End Navigation -->
     </header>
     <!-- End Header -->
-    
 
-    <div id="smooth-content">
-        <!-- Start Projects 
-        ============================================= -->
-        <div class="project-style-two-area default-padding-bottom pt-220 pt-md-110 pt-xs-70">
-            <div class="container">
-                <div class="site-heading">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h2 class="text-large">Trabalhos <strong>Selecionados</strong></h2>
-                        </div>
-                        <div class="col-lg-6 offset-lg-3">
-                            <p>
-                                Cada projeto é um universo. Aqui estão algumas das marcas que ajudamos a construir, redesenhar e evoluir.
-                            </p>
-                        </div>
-                    </div>
+    <!-- Start Breadcrumb -->
+    <div class="breadcrumb-area text-center bg-cover text-light bg-theme" style="background-image: url(assets/img/shape/banner-14.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <h1>Portfolio</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li>Portfolio</li>
+                    </ul>
                 </div>
             </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="project-style-two-items">
-                            <!-- Single Item -->
-                            <div class="project-style-two-item">
-                                <img src="assets/Portfolio/calm-down.jpg" alt="Calm Down">
-                                <div class="info bg-dark text-light" style="background-image: url(assets/img/shape/10.png);">
-                                    <div class="top">
-                                        <ul class="project-tags mb-30">
-                                            <li>UX/UI</li>
-                                            <li>Branding</li>
-                                        </ul>
-                                        <h3><a href="#">Calm Down</a></h3>
-                                    </div>
-                                    <div class="bottom">
-                                        <a href="#" class="btn-simple">Ver Projeto <i class="fas fa-long-arrow-right"></i></a>
+        </div>
+    </div>
+    <!-- End Breadcrumb -->
 
-                                    </div>
-                                </div>
+    <div id="smooth-content">
+        <!-- Start Projects
+        ============================================= -->
+        <div class="project-style-two-area default-padding">
+            <div class="container-fluid px-4">
+                <div class="orbz-portfolio-grid">
+
+                    <!-- 1 -->
+                    <div class="orbz-portfolio-card" data-title="Calm Down" data-tags="UX/UI · Branding" data-desc="Identidade visual e UX design para aplicativo de bem-estar mental." data-img="assets/Portfolio/calm-down.jpg" data-link="#">
+                        <img src="assets/Portfolio/calm-down.jpg" alt="Calm Down">
+                        <div class="card-overlay">
+                            <ul class="project-tags mb-10"><li>UX/UI</li><li>Branding</li></ul>
+                            <h3>Calm Down</h3>
+                        </div>
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="orbz-portfolio-card" data-title="Ascendi" data-tags="UX/UI · Design" data-desc="Design de plataforma para desenvolvimento profissional e pessoal." data-img="assets/Portfolio/ascendi.jpg" data-link="#">
+                        <img src="assets/Portfolio/ascendi.jpg" alt="Ascendi">
+                        <div class="card-overlay">
+                            <ul class="project-tags mb-10"><li>UX/UI</li><li>Design</li></ul>
+                            <h3>Ascendi</h3>
+                        </div>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="orbz-portfolio-card" data-title="AMR App" data-tags="UX/UI · Mobile" data-desc="Aplicativo mobile com foco em usabilidade e experiência fluida." data-img="assets/Portfolio/amr-app.jpg" data-link="#">
+                        <img src="assets/Portfolio/amr-app.jpg" alt="AMR App">
+                        <div class="card-overlay">
+                            <ul class="project-tags mb-10"><li>UX/UI</li><li>Mobile</li></ul>
+                            <h3>AMR App</h3>
+                        </div>
+                    </div>
+
+                    <!-- 4 -->
+                    <div class="orbz-portfolio-card" data-title="AMR Dashboard" data-tags="SaaS · Desenvolvimento" data-desc="Painel administrativo SaaS com visualização de dados em tempo real." data-img="assets/Portfolio/amr-dashboard.jpg" data-link="#">
+                        <img src="assets/Portfolio/amr-dashboard.jpg" alt="AMR Dashboard">
+                        <div class="card-overlay">
+                            <ul class="project-tags mb-10"><li>SaaS</li><li>Desenvolvimento</li></ul>
+                            <h3>AMR Dashboard</h3>
+                        </div>
+                    </div>
+
+                    <!-- 5 -->
+                    <div class="orbz-portfolio-card" data-title="SanMarques Capital" data-tags="Sites · Institucional" data-desc="Site institucional para gestora de capital com identidade moderna." data-img="assets/Portfolio/sanmarques.jpg" data-link="https://www.sanmarquescapital.com.br">
+                        <img src="assets/Portfolio/sanmarques.jpg" alt="SanMarques Capital">
+                        <div class="card-overlay">
+                            <ul class="project-tags mb-10"><li>Sites</li><li>Institucional</li></ul>
+                            <h3>SanMarques Capital</h3>
+                        </div>
+                    </div>
+
+                    <!-- 6 -->
+                    <div class="orbz-portfolio-card" data-title="Inter Eventos" data-tags="Sites · Institucional" data-desc="Site completo para empresa de eventos corporativos e sociais." data-img="assets/Portfolio/inter-eventos.jpg" data-link="https://intereventos.com.br">
+                        <img src="assets/Portfolio/inter-eventos.jpg" alt="Inter Eventos">
+                        <div class="card-overlay">
+                            <ul class="project-tags mb-10"><li>Sites</li><li>Institucional</li></ul>
+                            <h3>Inter Eventos</h3>
+                        </div>
+                    </div>
+
+                    <!-- 7 -->
+                    <div class="orbz-portfolio-card" data-title="Programa Bônus" data-tags="Sites · Institucional" data-desc="Landing page institucional para programa de fidelidade e recompensas." data-img="assets/Portfolio/programa-bonus-site.jpg" data-link="#">
+                        <img src="assets/Portfolio/programa-bonus-site.jpg" alt="Programa Bônus">
+                        <div class="card-overlay">
+                            <ul class="project-tags mb-10"><li>Sites</li><li>Institucional</li></ul>
+                            <h3>Programa Bônus</h3>
+                        </div>
+                    </div>
+
+                    <!-- 8 -->
+                    <div class="orbz-portfolio-card" data-title="Programa Bônus SaaS" data-tags="SaaS · Desenvolvimento" data-desc="Sistema de gestão do programa de bônus com painel para parceiros." data-img="assets/Portfolio/programa-bonus-saas.jpg" data-link="#">
+                        <img src="assets/Portfolio/programa-bonus-saas.jpg" alt="Programa Bônus SaaS">
+                        <div class="card-overlay">
+                            <ul class="project-tags mb-10"><li>SaaS</li><li>Desenvolvimento</li></ul>
+                            <h3>Programa Bônus SaaS</h3>
+                        </div>
+                    </div>
+
+                    <!-- 9 -->
+                    <div class="orbz-portfolio-card" data-title="Forma Propaganda" data-tags="SaaS · Desenvolvimento" data-desc="Sistema interno para gestão de campanhas de uma agência de publicidade." data-img="assets/Portfolio/forma-propaganda.jpg" data-link="#">
+                        <img src="assets/Portfolio/forma-propaganda.jpg" alt="Forma Propaganda">
+                        <div class="card-overlay">
+                            <ul class="project-tags mb-10"><li>SaaS</li><li>Desenvolvimento</li></ul>
+                            <h3>Forma Propaganda</h3>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- End Project -->
+
+        <!-- Modal Portfolio -->
+        <div class="modal fade" id="portfolioModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content bg-dark text-light border-0" style="border-radius:16px;overflow:hidden;">
+                    <div class="modal-body p-0">
+                        <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close" style="z-index:10;"></button>
+                        <div class="row g-0">
+                            <div class="col-lg-8">
+                                <img id="modal-img" src="" alt="" style="width:100%;height:100%;object-fit:cover;min-height:400px;">
                             </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="project-style-two-item">
-                                <img src="assets/Portfolio/ascendi.jpg" alt="Ascendi">
-                                <div class="info bg-dark text-light" style="background-image: url(assets/img/shape/10.png);">
-                                    <div class="top">
-                                        <ul class="project-tags mb-30">
-                                            <li>UX/UI</li>
-                                            <li>Design</li>
-                                        </ul>
-                                        <h3><a href="#">Ascendi</a></h3>
-                                    </div>
-                                    <div class="bottom">
-                                        <a href="#" class="btn-simple">Ver Projeto <i class="fas fa-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
+                            <div class="col-lg-4 p-5 d-flex flex-column justify-content-center">
+                                <div id="modal-tags" class="mb-20"></div>
+                                <h2 id="modal-title" class="mb-20"></h2>
+                                <p id="modal-desc" style="color:rgba(255,255,255,0.7);"></p>
+                                <a id="modal-link" href="#" target="_blank" class="btn btn-style-one mt-30" style="display:none;">Ver projeto <i class="fas fa-arrow-right"></i></a>
                             </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="project-style-two-item">
-                                <img src="assets/Portfolio/amr-app.jpg" alt="AMR">
-                                <div class="info bg-dark text-light" style="background-image: url(assets/img/shape/10.png);">
-                                    <div class="top">
-                                        <ul class="project-tags mb-30">
-                                            <li>UX/UI</li>
-                                            <li>Design</li>
-                                        </ul>
-                                        <h3><a href="#">AMR</a></h3>
-                                    </div>
-                                    <div class="bottom">
-                                        <a href="#" class="btn-simple">Ver Projeto <i class="fas fa-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="project-style-two-item">
-                                <img src="assets/Portfolio/amr-dashboard.jpg" alt="AMR Dashboard">
-                                <div class="info bg-dark text-light" style="background-image: url(assets/img/shape/10.png);">
-                                    <div class="top">
-                                        <ul class="project-tags mb-30">
-                                            <li>SaaS</li>
-                                            <li>Desenvolvimento</li>
-                                        </ul>
-                                        <h3><a href="#">AMR Dashboard</a></h3>
-                                    </div>
-                                    <div class="bottom">
-                                        <a href="#" class="btn-simple">Ver Projeto <i class="fas fa-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="project-style-two-item">
-                                <img src="assets/Portfolio/sanmarques.jpg" alt="SanMarques Capital">
-                                <div class="info bg-dark text-light" style="background-image: url(assets/img/shape/10.png);">
-                                    <div class="top">
-                                        <ul class="project-tags mb-30">
-                                            <li>Sites</li>
-                                            <li>Institucional</li>
-                                        </ul>
-                                        <h3><a href="https://www.sanmarquescapital.com.br" target="_blank">SanMarques Capital</a></h3>
-                                    </div>
-                                    <div class="bottom">
-                                        <a href="#" class="btn-simple">Ver Projeto <i class="fas fa-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="project-style-two-item">
-                                <img src="assets/Portfolio/inter-eventos.jpg" alt="Inter Eventos">
-                                <div class="info bg-dark text-light" style="background-image: url(assets/img/shape/10.png);">
-                                    <div class="top">
-                                        <ul class="project-tags mb-30">
-                                            <li>Sites</li>
-                                            <li>Institucional</li>
-                                        </ul>
-                                        <h3><a href="https://intereventos.com.br" target="_blank">Inter Eventos</a></h3>
-                                    </div>
-                                    <div class="bottom">
-                                        <a href="#" class="btn-simple">Ver Projeto <i class="fas fa-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="project-style-two-item">
-                                <img src="assets/Portfolio/programa-bonus-site.jpg" alt="Programa Bônus">
-                                <div class="info bg-dark text-light" style="background-image: url(assets/img/shape/10.png);">
-                                    <div class="top">
-                                        <ul class="project-tags mb-30">
-                                            <li>Sites</li>
-                                            <li>Institucional</li>
-                                        </ul>
-                                        <h3><a href="#">Programa Bônus</a></h3>
-                                    </div>
-                                    <div class="bottom">
-                                        <a href="#" class="btn-simple">Ver Projeto <i class="fas fa-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="project-style-two-item">
-                                <img src="assets/Portfolio/programa-bonus-saas.jpg" alt="Programa Bônus SaaS">
-                                <div class="info bg-dark text-light" style="background-image: url(assets/img/shape/10.png);">
-                                    <div class="top">
-                                        <ul class="project-tags mb-30">
-                                            <li>SaaS</li>
-                                            <li>Desenvolvimento</li>
-                                        </ul>
-                                        <h3><a href="#">Programa Bônus SaaS</a></h3>
-                                    </div>
-                                    <div class="bottom">
-                                        <a href="#" class="btn-simple">Ver Projeto <i class="fas fa-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="project-style-two-item">
-                                <img src="assets/Portfolio/forma-propaganda.jpg" alt="Forma Propaganda">
-                                <div class="info bg-dark text-light" style="background-image: url(assets/img/shape/10.png);">
-                                    <div class="top">
-                                        <ul class="project-tags mb-30">
-                                            <li>SaaS</li>
-                                            <li>Desenvolvimento</li>
-                                        </ul>
-                                        <h3><a href="#">Forma Propaganda</a></h3>
-                                    </div>
-                                    <div class="bottom">
-                                        <a href="#" class="btn-simple">Ver Projeto <i class="fas fa-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- End Project -->
+        <!-- End Modal -->
+
     </div>
 
 
-    
+
     <!-- Start Footer 
     ============================================= -->
     <footer class="footer-style-one box-layout bg-dark text-light">
@@ -409,10 +357,62 @@
 
     </footer>
     <!-- End Footer -->
-    
+
     <!-- jQuery Frameworks
     ============================================= -->
+    <script>
+(function() {
+    var preloader = document.getElementById('preloader');
+    var video = document.getElementById('loader-video');
+
+    function hideLoader() {
+        preloader.classList.add('fade-out');
+        setTimeout(function() {
+            preloader.style.display = 'none';
+        }, 500);
+    }
+
+    if (video) {
+        video.addEventListener('ended', hideLoader);
+        // fallback: esconde após 4s caso o vídeo não carregue
+        setTimeout(hideLoader, 4000);
+    } else {
+        window.addEventListener('load', hideLoader);
+    }
+})();
+    </script>
     <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    var cards = document.querySelectorAll('.orbz-portfolio-card');
+    var modal = document.getElementById('portfolioModal');
+
+    cards.forEach(function (card) {
+        card.addEventListener('click', function () {
+            document.getElementById('modal-img').src = card.dataset.img;
+            document.getElementById('modal-img').alt = card.dataset.title;
+            document.getElementById('modal-title').textContent = card.dataset.title;
+            document.getElementById('modal-desc').textContent = card.dataset.desc;
+
+            var tagsHtml = card.dataset.tags.split('·').map(function(t){
+                return '<span class="project-tags"><li style="display:inline-block;margin-right:8px;background:rgba(155,114,247,0.2);color:#9b72f7;padding:4px 12px;border-radius:20px;font-size:0.8rem;">' + t.trim() + '</li></span>';
+            }).join('');
+            document.getElementById('modal-tags').innerHTML = tagsHtml;
+
+            var link = document.getElementById('modal-link');
+            if (card.dataset.link && card.dataset.link !== '#') {
+                link.href = card.dataset.link;
+                link.style.display = 'inline-flex';
+            } else {
+                link.style.display = 'none';
+            }
+
+            var bsModal = new bootstrap.Modal(modal);
+            bsModal.show();
+        });
+    });
+});
+    </script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery.appear.js"></script>
     <script src="assets/js/jquery.easing.min.js"></script>

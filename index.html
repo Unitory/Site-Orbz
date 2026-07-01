@@ -7,6 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Criação de marca, design UX/UI e desenvolvimento web. A Orbz conecta marca, experiência e tecnologia para negócios que querem se destacar.">
+    <meta property="og:title" content="Orbz — Agência de Design & Tecnologia">
+    <meta property="og:description" content="Branding, UX/UI design, sites e sistemas SaaS. Transformamos marcas em experiências digitais que geram resultado.">
+    <meta property="og:image" content="https://orbzsolutions.com.br/assets/img/logo-orbz/simbolo-roxo.svg">
+    <meta property="og:url" content="https://orbzsolutions.com.br/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Orbz">
+    <meta name="twitter:card" content="summary_large_image">
 
     <!-- ========== Page Title ========== -->
     <title>Orbz - Agência de Design & Tecnologia</title>
@@ -36,22 +43,13 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
 
-    <!-- Start Preloader 
+    <!-- Start Preloader
     ============================================= -->
     <div id="preloader">
-        <div class="robok-loader-inner">
-           <div class="robok-loader">
-              <span class="robok-loader-item"></span>
-              <span class="robok-loader-item"></span>
-              <span class="robok-loader-item"></span>
-              <span class="robok-loader-item"></span>
-              <span class="robok-loader-item"></span>
-              <span class="robok-loader-item"></span>
-              <span class="robok-loader-item"></span>
-              <span class="robok-loader-item"></span>
-           </div>
-        </div>
-     </div>
+        <video autoplay muted playsinline id="loader-video">
+            <source src="assets/load.mp4" type="video/mp4">
+        </video>
+    </div>
     <!-- preloader end -->
 
 
@@ -85,6 +83,7 @@
                     </button>
                     
                     <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="about-us.html">Sobre nós</a></li>
                         <li><a href="services-4.html">Serviços</a></li>
                         <li><a href="project.html">Portfolio</a></li>
@@ -453,18 +452,17 @@
                             <!-- Single Item -->
                             <div class="project-style-one-item">
                                 <div class="thumb">
-                                    <img src="assets/img/projects/1.jpg" alt="Image Not Found">
+                                    <img src="assets/Portfolio/calm-down.jpg" alt="Calm Down">
                                     <img src="assets/img/shape/4.png" alt="Image Not Found">
                                 </div>
                                 <div class="info">
                                     <div class="top">
-                                        <h3><a href="project-details.html">Calm Down</a></h3>
+                                        <h3><a href="project.html">Calm Down</a></h3>
                                     </div>
                                     <div class="bottom">
-                                        <a href="#portfolio" class="btn-simple">Explore More <i class="fas fa-long-arrow-right"></i></a>
+                                        <a href="project.html" class="btn-simple">Ver mais <i class="fas fa-long-arrow-right"></i></a>
                                         <ul class="project-tags mt-30">
                                             <li>UX/UI</li>
-                                            <li>Design</li>
                                             <li>Branding</li>
                                         </ul>
                                     </div>
@@ -474,19 +472,18 @@
                             <!-- Single Item -->
                             <div class="project-style-one-item">
                                 <div class="thumb">
-                                    <img src="assets/img/projects/2.jpg" alt="Image Not Found">
+                                    <img src="assets/Portfolio/sanmarques.jpg" alt="SanMarques Capital">
                                     <img src="assets/img/shape/5.png" alt="Image Not Found">
                                 </div>
                                 <div class="info">
                                     <div class="top">
-                                        <h3><a href="project-details.html">SanMarques Capital</a></h3>
+                                        <h3><a href="project.html">SanMarques Capital</a></h3>
                                     </div>
                                     <div class="bottom">
-                                        <a href="#portfolio" class="btn-simple">Explore More <i class="fas fa-long-arrow-right"></i></a>
+                                        <a href="project.html" class="btn-simple">Ver mais <i class="fas fa-long-arrow-right"></i></a>
                                         <ul class="project-tags mt-30">
                                             <li>Sites</li>
                                             <li>Institucional</li>
-                                            <li>Tecnologia</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -495,19 +492,18 @@
                             <!-- Single Item -->
                             <div class="project-style-one-item">
                                 <div class="thumb">
-                                    <img src="assets/img/projects/3.jpg" alt="Image Not Found">
+                                    <img src="assets/Portfolio/programa-bonus-saas.jpg" alt="Programa Bônus">
                                     <img src="assets/img/shape/6.png" alt="Image Not Found">
                                 </div>
                                 <div class="info">
                                     <div class="top">
-                                        <h3><a href="project-details.html">Inter Eventos</a></h3>
+                                        <h3><a href="project.html">Programa Bônus</a></h3>
                                     </div>
                                     <div class="bottom">
-                                        <a href="#portfolio" class="btn-simple">Explore More <i class="fas fa-long-arrow-right"></i></a>
+                                        <a href="project.html" class="btn-simple">Ver mais <i class="fas fa-long-arrow-right"></i></a>
                                         <ul class="project-tags mt-30">
-                                            <li>Sites</li>
-                                            <li>Institucional</li>
-                                            <li>Desenvolvimento</li>
+                                            <li>SaaS</li>
+                                            <li>UX/UI</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -842,7 +838,7 @@
                         <!-- Single Item -->
                         <div class="blog-style-one fade-up-anim">
                             <div class="thumb zoom-thumb">
-                                <a href="#"><img class="img-reveal" src="assets/img/blog/1.jpg" alt="Thumb"></a>
+                                <a href="#"><img class="img-reveal" src="assets/Blog-identidade.png" alt="Thumb"></a>
                             </div>
                             <div class="info">
                                 <div class="blog-one-meta">
@@ -865,7 +861,7 @@
                         <!-- Single Item -->
                         <div class="blog-style-one fade-up-anim">
                             <div class="thumb zoom-thumb">
-                                <a href="#"><img class="img-reveal" src="assets/img/blog/2.jpg" alt="Thumb"></a>
+                                <a href="#"><img class="img-reveal" src="assets/Blog-ux.png" alt="Thumb"></a>
                             </div>
                             <div class="info">
                                 <div class="blog-one-meta">
@@ -888,7 +884,7 @@
                         <!-- Single Item -->
                         <div class="blog-style-one fade-up-anim">
                             <div class="thumb zoom-thumb">
-                                <a href="#"><img class="img-reveal" src="assets/img/blog/3.jpg" alt="Thumb"></a>
+                                <a href="#"><img class="img-reveal" src="assets/Blog-sites.png" alt="Thumb"></a>
                             </div>
                             <div class="info">
                                 <div class="blog-one-meta">
@@ -1027,6 +1023,27 @@
     
     <!-- jQuery Frameworks
     ============================================= -->
+    <script>
+(function() {
+    var preloader = document.getElementById('preloader');
+    var video = document.getElementById('loader-video');
+
+    function hideLoader() {
+        preloader.classList.add('fade-out');
+        setTimeout(function() {
+            preloader.style.display = 'none';
+        }, 500);
+    }
+
+    if (video) {
+        video.addEventListener('ended', hideLoader);
+        // fallback: esconde após 4s caso o vídeo não carregue
+        setTimeout(hideLoader, 4000);
+    } else {
+        window.addEventListener('load', hideLoader);
+    }
+})();
+    </script>
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery.appear.js"></script>

@@ -133,3 +133,155 @@ Sidebar heading:  20px 'Sora', sans-serif
 .contact-style-one-info ul li .info a {
     color: #9b72f7 !important;
 }
+
+/* =============================================
+   DIFERENCIAIS — REMOVER CARD/BADGE INTERNO
+   ============================================= */
+
+/* DIFERENCIAIS — remover card/badge interno, só tipografia */
+.brand-style-two-item .info a {
+    all: unset !important;
+    display: block !important;
+    margin-top: 12px !important;
+    font-size: 0.95rem !important;
+    color: rgba(255, 255, 255, 0.75) !important;
+    font-weight: 400 !important;
+    cursor: default !important;
+}
+
+.brand-style-two-item .info a:hover {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.brand-style-two-item .logo-icon {
+    margin-top: 16px;
+}
+
+/* =============================================
+   PORTFOLIO BENTO GRID
+   ============================================= */
+.orbz-portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+.orbz-portfolio-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    cursor: pointer;
+    aspect-ratio: 4/3;
+    background: #111;
+}
+.orbz-portfolio-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block;
+}
+.orbz-portfolio-card:hover img {
+    transform: scale(1.06);
+}
+.orbz-portfolio-card .card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 28px;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+    transform: translateY(12px);
+    opacity: 0;
+    transition: all 0.35s ease;
+}
+.orbz-portfolio-card:hover .card-overlay {
+    transform: translateY(0);
+    opacity: 1;
+}
+.orbz-portfolio-card .card-overlay h3 {
+    color: #fff;
+    font-size: 1.3rem;
+    margin: 0;
+}
+.orbz-portfolio-card .card-overlay .project-tags li {
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: #fff;
+    font-size: 0.75rem;
+}
+
+/* Modal */
+#portfolioModal .modal-content {
+    background: #111 !important;
+}
+
+@media (max-width: 768px) {
+    .orbz-portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .orbz-portfolio-card.wide {
+        grid-column: span 2;
+    }
+}
+@media (max-width: 480px) {
+    .orbz-portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    .orbz-portfolio-card.wide {
+        grid-column: span 1;
+    }
+}
+
+/* =============================================
+   VIDEO PRELOADER
+   ============================================= */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease;
+}
+
+#loader-video {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+#preloader.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* =============================================
+   LOGO TAMANHO — HEADER E FOOTER
+   ============================================= */
+
+/* Logo tamanho — header */
+.navbar-brand img.logo {
+    height: 48px !important;
+    width: auto !important;
+}
+
+/* Logo tamanho — mobile sidenav (dentro do collapse) */
+.navbar-collapse > img {
+    height: 44px !important;
+    width: auto !important;
+    margin-bottom: 24px;
+}
+
+/* Logo tamanho — footer */
+footer .logo img,
+footer .footer-bottom-one .logo img,
+.f-item.about .logo img {
+    height: 44px !important;
+    width: auto !important;
+}
