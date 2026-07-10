@@ -1,0 +1,287 @@
+/* ----------------------------------
+
+Template Name: Robok - AI Agency & Technology HTML Template
+Author: validtheme
+Description:
+Version: 1.0
+
+Main Font    : Sora
+Main Color   : #7476ff
+
+-------------------------------------
+
+[Typography]
+
+Body copy:    15px 'Sora', sans-serif
+Header:     36px 'Sora', sans-serif
+Input, textarea:  16px 'Sora', sans-serif
+Sidebar heading:  20px 'Sora', sans-serif
+
+>>> TABLE OF CONTENTS:
+=======================
+        
+    01. Template default css
+        - Animations
+        - General
+        - Section Title
+        - Video Button
+        - Typography
+        - Tables
+        - Forms
+        - Buttons
+        - Pagination
+        - Colors
+    02. Preloader
+    03. Topbar
+	    - Topbar Style One
+        - Topbar Style Two
+    04 Navbar
+        - Navbar Default
+        - Navbar Transparent
+        - Navbar Sticky
+        - Navbar Box
+    05. Banner
+        - Banner Fade
+        - Banner Slide
+        - Banner Zoom
+    06. About Us
+	    - About Style One
+        - About Style Two
+    07. Services
+        - Tab Version
+        - Grid Version
+        - Services Single
+    08. Features
+    09. Work Process
+    10. Why Choose Us
+    11. Fun Factor
+    12. Pricing Table
+    12. Partner World Wide
+    13. Team
+        - Grid Version
+        - Carousel Version
+        - Team Details
+    14. Testimonials
+		- Single Slider
+        - Center Slider
+    15. Projects
+		- Grid Version
+        - Carousel Version
+        - Project Details
+    16. Blog
+        - Standard
+        - Left Sidebar
+        - Right Sidebar
+        - Single
+    17. Request Call Back
+    18. FAQ
+    19. Error 404
+    20. Footer
+    21. PHP Contact Form
+    22. Others
+
+*/
+
+/*
+** Write you custom css below
+*/
+
+/* =============================================
+   CONTACT PAGE — DARK THEME OVERRIDES
+   ============================================= */
+
+/* Form card — fundo escuro */
+.contact-form-card {
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    background-image: none !important;
+}
+
+/* Subtítulo "CONSULTA GRATUITA" */
+.contact-form-card h4.sub-title {
+    color: #9b72f7 !important;
+}
+
+/* Parágrafo do formulário */
+.contact-form-card p {
+    color: rgba(255, 255, 255, 0.65) !important;
+}
+
+/* Inputs e textarea */
+.contact-form-card .form-control {
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 0 !important;
+    color: #ffffff !important;
+    padding-left: 0 !important;
+}
+
+.contact-form-card .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.contact-form-card .form-control:focus {
+    border-bottom-color: #9b72f7 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Info de contato — telefone e email clicáveis */
+.contact-style-one-info ul li .content a,
+.contact-style-one-info ul li .info a {
+    color: #9b72f7 !important;
+}
+
+/* =============================================
+   DIFERENCIAIS — REMOVER CARD/BADGE INTERNO
+   ============================================= */
+
+/* DIFERENCIAIS — remover card/badge interno, só tipografia */
+.brand-style-two-item .info a {
+    all: unset !important;
+    display: block !important;
+    margin-top: 12px !important;
+    font-size: 0.95rem !important;
+    color: rgba(255, 255, 255, 0.75) !important;
+    font-weight: 400 !important;
+    cursor: default !important;
+}
+
+.brand-style-two-item .info a:hover {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.brand-style-two-item .logo-icon {
+    margin-top: 16px;
+}
+
+/* =============================================
+   PORTFOLIO BENTO GRID
+   ============================================= */
+.orbz-portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+.orbz-portfolio-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    cursor: pointer;
+    aspect-ratio: 4/3;
+    background: #111;
+}
+.orbz-portfolio-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block;
+}
+.orbz-portfolio-card:hover img {
+    transform: scale(1.06);
+}
+.orbz-portfolio-card .card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 28px;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+    transform: translateY(12px);
+    opacity: 0;
+    transition: all 0.35s ease;
+}
+.orbz-portfolio-card:hover .card-overlay {
+    transform: translateY(0);
+    opacity: 1;
+}
+.orbz-portfolio-card .card-overlay h3 {
+    color: #fff;
+    font-size: 1.3rem;
+    margin: 0;
+}
+.orbz-portfolio-card .card-overlay .project-tags li {
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: #fff;
+    font-size: 0.75rem;
+}
+
+/* Modal */
+#portfolioModal .modal-content {
+    background: #111 !important;
+}
+
+@media (max-width: 768px) {
+    .orbz-portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .orbz-portfolio-card.wide {
+        grid-column: span 2;
+    }
+}
+@media (max-width: 480px) {
+    .orbz-portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    .orbz-portfolio-card.wide {
+        grid-column: span 1;
+    }
+}
+
+/* =============================================
+   VIDEO PRELOADER
+   ============================================= */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease;
+}
+
+#loader-video {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+#preloader.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* =============================================
+   LOGO TAMANHO — HEADER E FOOTER
+   ============================================= */
+
+/* Logo tamanho — header */
+.navbar-brand img.logo {
+    height: 48px !important;
+    width: auto !important;
+}
+
+/* Logo tamanho — mobile sidenav (dentro do collapse) */
+.navbar-collapse > img {
+    height: 44px !important;
+    width: auto !important;
+    margin-bottom: 24px;
+}
+
+/* Logo tamanho — footer */
+footer .logo img,
+footer .footer-bottom-one .logo img,
+.f-item.about .logo img {
+    height: 44px !important;
+    width: auto !important;
+}
