@@ -1,28 +1,25 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
-    <!-- ========== Meta Tags ========== -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Conteúdo sobre branding, UX/UI design e tecnologia para negócios que querem crescer no digital.">
-    <meta property="og:title" content="Blog — Orbz">
-    <meta property="og:description" content="Conteúdo sobre branding, design e tecnologia. Artigos da Orbz para marcas que querem crescer no digital.">
-    <meta property="og:image" content="https://orbzsolutions.com.br/assets/Blog-identidade.png">
-    <meta property="og:url" content="https://orbzsolutions.com.br/blog-with-sidebar.html">
-    <meta property="og:type" content="website">
+
+    <!-- Meta dinâmicos preenchidos via JS -->
+    <meta id="meta-description" name="description" content="">
+    <meta id="og-title" property="og:title" content="">
+    <meta id="og-description" property="og:description" content="">
+    <meta id="og-image" property="og:image" content="">
+    <meta id="og-url" property="og:url" content="">
+    <meta property="og:type" content="article">
     <meta property="og:site_name" content="Orbz">
     <meta name="twitter:card" content="summary_large_image">
 
-    <!-- ========== Page Title ========== -->
-    <title>Orbz - Blog</title>
+    <title id="page-title">Orbz - Blog</title>
 
-    <!-- ========== Favicon Icon ========== -->
     <link rel="shortcut icon" href="assets/img/logo-orbz/simbolo-roxo.svg" type="image/svg+xml">
 
-    <!-- ========== Start Stylesheet ========== -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
     <link href="assets/css/validthemes-icon.css" rel="stylesheet">
@@ -34,7 +31,6 @@
     <link href="assets/css/unit-test.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
-    <!-- ========== End Stylesheet ========== -->
 
     <!-- Meta Pixel Code -->
     <script>
@@ -54,33 +50,39 @@
     /></noscript>
     <!-- End Meta Pixel Code -->
 
+    <style>
+        /* Estilos para o conteúdo do post vindo do WordPress */
+        .wp-post-content p { margin-bottom: 1.4rem; }
+        .wp-post-content h2 { margin: 2rem 0 1rem; }
+        .wp-post-content h3 { margin: 1.6rem 0 0.8rem; }
+        .wp-post-content ul, .wp-post-content ol { padding-left: 1.5rem; margin-bottom: 1.4rem; }
+        .wp-post-content blockquote {
+            border-left: 4px solid #7c3aed;
+            padding: 12px 20px;
+            margin: 1.6rem 0;
+            font-style: italic;
+            opacity: 0.85;
+        }
+        .wp-post-content img { max-width: 100%; border-radius: 8px; margin: 1rem 0; }
+        .wp-post-content a { color: #7c3aed; text-decoration: underline; }
+        #post-loading { text-align: center; padding: 80px 0; color: rgba(255,255,255,0.5); }
+        #post-error  { text-align: center; padding: 60px 0; color: rgba(255,255,255,0.4); }
+    </style>
 </head>
 
 <body class="smooth-scroll-yes include-breadcrumb">
 
-    <!--[if lte IE 9]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-    <![endif]-->
-
-    <!-- Start Preloader
-    ============================================= -->
+    <!-- Preloader -->
     <div id="preloader">
         <video autoplay muted playsinline id="loader-video">
             <source src="assets/load.mp4" type="video/mp4">
         </video>
     </div>
-    <!-- preloader end -->
 
-    <!-- Header 
-    ============================================= -->
+    <!-- Header -->
     <header>
-        <!-- Start Navigation -->
         <nav class="navbar mobile-sidenav navbar-common navbar-sticky navbar-default validnavs navbar-fixed no-background">
-
-            <div class="container d-flex justify-content-between align-items-center">            
-                
-
-                <!-- Start Header Navigation -->
+            <div class="container d-flex justify-content-between align-items-center">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                         <i class="fa fa-bars"></i>
@@ -89,16 +91,11 @@
                         <img src="assets/img/logo-orbz/logo-roxo.svg" class="logo" alt="Logo">
                     </a>
                 </div>
-                <!-- End Header Navigation -->
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
-
                     <img src="assets/img/logo-orbz/logo-roxo.svg" alt="Logo">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                         <i class="fa fa-times"></i>
                     </button>
-                    
                     <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about-us.html">Sobre nós</a></li>
@@ -107,10 +104,8 @@
                         <li><a href="blog-with-sidebar.html">Blog</a></li>
                         <li><a href="contact-us.html">Contato</a></li>
                     </ul>
-                </div><!-- /.navbar-collapse -->
-
+                </div>
                 <div class="attr-right">
-                    <!-- Start Atribute Navigation -->
                     <div class="attr-nav">
                         <ul>
                             <li class="button">
@@ -118,70 +113,134 @@
                             </li>
                         </ul>
                     </div>
-                    <!-- End Atribute Navigation -->
-
-
                 </div>
-                <!-- Main Nav -->
-            </div>  
-
-            <!-- Overlay screen for menu -->
+            </div>
             <div class="overlay-screen"></div>
-            <!-- End Overlay screen for menu -->
-
         </nav>
-        <!-- End Navigation -->
     </header>
-    <!-- End Header -->
 
-    <!-- Start Breadcrumb 
-    ============================================= -->
+    <!-- Breadcrumb dinâmico -->
     <div class="breadcrumb-area text-center bg-cover text-light bg-theme" style="background-image: url(assets/img/shape/banner-14.jpg);">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
-                    <h1>Blog</h1>
+                    <h1 id="breadcrumb-title">Carregando artigo...</h1>
                     <ul class="breadcrumb">
                         <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                        <li>Blog</li>
+                        <li><a href="blog-with-sidebar.html">Blog</a></li>
+                        <li id="breadcrumb-cat">Artigo</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Breadcrumb -->
-    
-    <!-- Start Blog
-    ============================================= -->
-    <div class="blog-area full-blog default-padding">
+
+    <!-- Conteúdo do Post -->
+    <div class="blog-area single full-blog right-sidebar full-blog default-padding">
         <div class="container">
             <div class="blog-items">
                 <div class="row">
                     <div class="blog-content col-xl-8 col-lg-7 col-md-12 pr-35 pr-md-15 pl-md-15 pr-xs-15 pl-xs-15">
-                        <!-- Posts carregados via WordPress REST API -->
-                        <div id="blog-posts-container" class="blog-item-box">
-                            <div id="blog-loading" style="text-align:center; padding: 60px 0; color: rgba(255,255,255,0.5);">
-                                <i class="fas fa-spinner fa-spin" style="font-size: 2rem;"></i>
-                                <p style="margin-top: 16px;">Carregando artigos...</p>
+
+                        <!-- Loading -->
+                        <div id="post-loading">
+                            <i class="fas fa-spinner fa-spin" style="font-size: 2rem;"></i>
+                            <p style="margin-top: 16px;">Carregando artigo...</p>
+                        </div>
+
+                        <!-- Conteúdo injetado via JS -->
+                        <div id="post-content-wrapper" style="display:none;">
+                            <div class="item">
+                                <div class="blog-item-box">
+                                    <div class="thumb" id="post-thumb" style="display:none;">
+                                        <img id="post-featured-img" src="" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <div class="meta">
+                                            <ul>
+                                                <li><a href="#"><i class="fas fa-calendar-alt"></i> <span id="post-date"></span></a></li>
+                                                <li><a href="#"><i class="fas fa-user-circle"></i> <span id="post-author"></span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div id="post-body" class="wp-post-content"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Assinatura da Orbz -->
+                            <div class="post-author">
+                                <div class="thumb">
+                                    <img src="assets/assinatura-artigo.png" alt="Orbz">
+                                </div>
+                                <div class="info">
+                                    <h4><a href="#">Orbz</a></h4>
+                                    <p>Estúdio de branding, design e tecnologia. Conectamos identidade, experiência e estratégia para criar marcas digitais que geram impacto real.</p>
+                                </div>
+                            </div>
+
+                            <!-- CTA -->
+                            <div class="blog-cta-box" style="background: linear-gradient(135deg, #1a0a3b 0%, #3b1fa8 100%); border-radius: 16px; padding: 40px; margin: 40px 0; text-align: center;">
+                                <h3 style="color: #fff; margin-bottom: 12px;">Pronto para construir sua marca?</h3>
+                                <p style="color: rgba(255,255,255,0.75); margin-bottom: 24px;">Fale com a Orbz e descubra como o design estratégico pode transformar o seu negócio.</p>
+                                <a href="https://wa.me/5514998042458" target="_blank" class="btn btn-style-one">Pedir um orçamento <i class="fas fa-arrow-right"></i></a>
+                            </div>
+
+                            <!-- Tags e Compartilhamento -->
+                            <div class="post-tags share">
+                                <div class="tags" id="post-tags-wrapper">
+                                    <h4>Tags: </h4>
+                                    <span id="post-tags"></span>
+                                </div>
+                                <div class="social">
+                                    <h4>Compartilhar:</h4>
+                                    <ul>
+                                        <li>
+                                            <a class="linkedin" id="share-linkedin" href="#" target="_blank">
+                                                <i class="fab fa-linkedin-in"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="whatsapp" id="share-whatsapp" href="#" target="_blank" style="background:#25D366;">
+                                                <i class="fab fa-whatsapp"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Navegação entre posts -->
+                            <div class="post-pagi-area" id="post-navigation" style="display:none;">
+                                <div class="post-previous" id="post-prev-wrapper" style="display:none;">
+                                    <a href="#" id="post-prev-link">
+                                        <div class="icon"><i class="fas fa-angle-double-left"></i></div>
+                                        <div class="nav-title">Post Anterior<h5 id="post-prev-title"></h5></div>
+                                    </a>
+                                </div>
+                                <div class="post-next" id="post-next-wrapper" style="display:none;">
+                                    <a href="#" id="post-next-link">
+                                        <div class="nav-title">Próximo Post<h5 id="post-next-title"></h5></div>
+                                        <div class="icon"><i class="fas fa-angle-double-right"></i></div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Pagination -->
-                        <div class="pager-area mt-40 text-center" id="blog-pagination" style="display:none;">
-                            <button id="btn-prev" class="btn btn-style-one" style="margin-right:8px;" onclick="changePage(-1)">← Anterior</button>
-                            <span id="page-info" style="color: rgba(255,255,255,0.5); font-size: 0.9rem; margin: 0 12px;"></span>
-                            <button id="btn-next" class="btn btn-style-one" onclick="changePage(1)">Próxima →</button>
+                        <!-- Erro -->
+                        <div id="post-error" style="display:none;">
+                            <i class="fas fa-exclamation-circle" style="font-size: 2rem; color: #7c3aed;"></i>
+                            <p style="margin-top: 16px;">Artigo não encontrado.</p>
+                            <a href="blog-with-sidebar.html" class="btn btn-style-one" style="margin-top: 16px;">← Voltar ao Blog</a>
                         </div>
+
                     </div>
 
-
-                    <!-- Start Sidebar -->
+                    <!-- Sidebar -->
                     <div class="sidebar col-xl-4 col-lg-5 col-md-12 mt-md-50 mt-xs-50">
                         <aside>
                             <div class="sidebar-item search">
                                 <div class="sidebar-info">
-                                    <form>
-                                        <input type="text"  placeholder="Enter Keyword" name="text" class="form-control">
+                                    <form onsubmit="handleSearch(event)">
+                                        <input type="text" id="search-input" placeholder="Buscar artigos" name="text" class="form-control">
                                         <button type="submit"><i class="fas fa-search"></i></button>
                                     </form>
                                 </div>
@@ -210,15 +269,12 @@
                             </div>
                         </aside>
                     </div>
-                    <!-- End Start Sidebar -->
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Blog -->
 
-    <!-- Start Footer 
-    ============================================= -->
+    <!-- Footer -->
     <footer class="footer-style-two bg-dark text-light">
         <div class="container">
             <div class="f-items default-padding">
@@ -226,18 +282,18 @@
                     <div class="col-lg-5">
                         <div class="f-item about">
                             <div class="logo">
-                                <img src="assets/img/logo-orbz/logo-branco.svg" alt="Image Not Found">
+                                <img src="assets/img/logo-orbz/logo-branco.svg" alt="Orbz">
                             </div>
                             <div class="newsletter-style-one">
                                 <h4>Newsletter Subscribe</h4>
                                 <form action="#">
                                     <input type="email" placeholder="Your Email" class="form-control" name="email">
-                                    <button type="submit"><img src="assets/img/icon/arrow-right-two.png" alt="Image Not Found"></button>  
+                                    <button type="submit"><img src="assets/img/icon/arrow-right-two.png" alt=""></button>
                                 </form>
                             </div>
                             <ul class="footer-item-social">
                                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><img src="assets/img/icon/twitter-x.png" alt="Image Not Found"></a></li>
+                                <li><a href="#"><img src="assets/img/icon/twitter-x.png" alt=""></a></li>
                                 <li><a href="https://www.instagram.com/orbz.solutions/" target="_blank"><i class="fab fa-instagram"></i></a></li>
                                 <li><a href="https://www.linkedin.com/in/orbz-solutions-033112367/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
                             </ul>
@@ -246,49 +302,28 @@
                     <div class="col-lg-7 pl-80 pl-md-15 pl-xs-15">
                         <h2 class="gradient-text">Sua marca no <br> digital começa aqui</h2>
                         <div class="row">
-                            <!-- Single Item -->
                             <div class="col-lg-4 col-md-6">
                                 <div class="f-item link">
                                     <h4 class="widget-title">Acesso Rápido</h4>
                                     <ul>
-                                        <li>
-                                            <a href="about-us.html">Sobre nós</a>
-                                        </li>
-                                        <li>
-                                            <a href="services-4.html">Serviços</a>
-                                        </li>
-                                        <li>
-                                            <a href="project.html">Portfolio</a>
-                                        </li>
-                                        <li>
-                                            <a href="contact-us.html">Contato</a>
-                                        </li>
+                                        <li><a href="about-us.html">Sobre nós</a></li>
+                                        <li><a href="services-4.html">Serviços</a></li>
+                                        <li><a href="project.html">Portfolio</a></li>
+                                        <li><a href="contact-us.html">Contato</a></li>
                                     </ul>
                                 </div>
                             </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
                             <div class="col-lg-4 col-md-6">
                                 <div class="f-item link">
                                     <h4 class="widget-title">Serviços</h4>
                                     <ul>
-                                        <li>
-                                            <a href="#">Branding</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">UX/UI Design</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Sites & Desenvolvimento</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Sistemas SaaS</a>
-                                        </li>
+                                        <li><a href="#">Branding</a></li>
+                                        <li><a href="#">UX/UI Design</a></li>
+                                        <li><a href="#">Sites & Desenvolvimento</a></li>
+                                        <li><a href="#">Sistemas SaaS</a></li>
                                     </ul>
                                 </div>
                             </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
                             <div class="col-lg-4">
                                 <div class="f-item contact">
                                     <h4 class="widget-title">Contato</h4>
@@ -304,14 +339,11 @@
                                     </ul>
                                 </div>
                             </div>
-                            <!-- End Single Item -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Start Footer Bottom -->
         <div class="footer-bottom">
             <div class="container">
                 <div class="row">
@@ -321,33 +353,23 @@
                 </div>
             </div>
         </div>
-        <!-- End Footer Bottom -->
-
     </footer>
-    <!-- End Footer -->
-    
-    <!-- jQuery Frameworks
-    ============================================= -->
+
     <script>
-(function() {
-    var preloader = document.getElementById('preloader');
-    var video = document.getElementById('loader-video');
-
-    function hideLoader() {
-        preloader.classList.add('fade-out');
-        setTimeout(function() {
-            preloader.style.display = 'none';
-        }, 500);
-    }
-
-    if (video) {
-        video.addEventListener('ended', hideLoader);
-        // fallback: esconde após 4s caso o vídeo não carregue
-        setTimeout(hideLoader, 4000);
-    } else {
-        window.addEventListener('load', hideLoader);
-    }
-})();
+    (function() {
+        var preloader = document.getElementById('preloader');
+        var video = document.getElementById('loader-video');
+        function hideLoader() {
+            preloader.classList.add('fade-out');
+            setTimeout(function() { preloader.style.display = 'none'; }, 500);
+        }
+        if (video) {
+            video.addEventListener('ended', hideLoader);
+            setTimeout(hideLoader, 4000);
+        } else {
+            window.addEventListener('load', hideLoader);
+        }
+    })();
     </script>
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -368,15 +390,11 @@
     <script src="assets/js/SplitText.min.js"></script>
     <script src="assets/js/main.js"></script>
 
-    <!-- ========== Blogger Blog Integration ========== -->
+    <!-- ========== Blogger Post Loader ========== -->
     <script>
     const BLOGGER_BLOG_ID = '5068025355458924806';
     const BLOGGER_KEY     = 'AIzaSyDVkVlRjAjbKh6cv9-anxCm0AlgKtqfKtw';
     const BLOGGER_API     = `https://www.googleapis.com/blogger/v3/blogs/${BLOGGER_BLOG_ID}`;
-
-    const POSTS_PER_PAGE = 5;
-    let pageTokens  = [null]; // índice 0 = primeira página (sem token)
-    let currentPage = 0;
 
     function formatDate(dateStr) {
         const d = new Date(dateStr);
@@ -385,92 +403,78 @@
         return `${d.getDate()} ${months[d.getMonth()]}, ${d.getFullYear()}`;
     }
 
-    function stripHtml(html) {
-        const tmp = document.createElement('div');
-        tmp.innerHTML = html;
-        return tmp.textContent || tmp.innerText || '';
-    }
-
     function getFeaturedImage(post) {
         if (post.images && post.images.length > 0) return post.images[0].url;
         const match = post.content && post.content.match(/<img[^>]+src="([^"]+)"/);
         if (match) return match[1];
-        return 'assets/img/blog/1.jpg';
+        return null;
     }
 
-    function buildPostCard(post) {
-        const id      = post.id;
-        const title   = post.title;
-        const excerpt = stripHtml(post.content).slice(0, 180) + '…';
-        const date    = formatDate(post.published);
-        const author  = post.author?.displayName || 'Orbz';
-        const cat     = post.labels?.[0] || '';
-        const img     = getFeaturedImage(post);
-        const link    = `blog-post.html?id=${id}`;
-
-        return `
-        <div class="blog-style-one-item">
-            <div class="thumb">
-                <a href="${link}">
-                    <img src="${img}" alt="${title}" style="width:100%;height:260px;object-fit:cover;">
-                </a>
-            </div>
-            <div class="info">
-                ${cat ? `<div class="tags"><a href="#">${cat}</a></div>` : ''}
-                <ul class="blog-meta">
-                    <li><i class="fas fa-calendar-alt"></i> ${date}</li>
-                    <li><i class="fas fa-user"></i> ${author}</li>
-                </ul>
-                <h3><a href="${link}">${title}</a></h3>
-                <p>${excerpt}</p>
-                <a href="${link}" class="btn-simple">Ler Mais <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>`;
+    function handleSearch(e) {
+        e.preventDefault();
+        const q = document.getElementById('search-input').value.trim();
+        if (q) window.location.href = `blog-with-sidebar.html?label=${encodeURIComponent(q)}`;
     }
 
-    async function loadPosts(pageIndex) {
-        const container = document.getElementById('blog-posts-container');
-        const loading   = document.getElementById('blog-loading');
-        loading.style.display = 'block';
-        container.querySelectorAll('.blog-style-one-item').forEach(el => el.remove());
+    async function loadPost() {
+        const params = new URLSearchParams(window.location.search);
+        const id     = params.get('id');
+
+        if (!id) { showError(); return; }
 
         try {
-            let url = `${BLOGGER_API}/posts?key=${BLOGGER_KEY}&maxResults=${POSTS_PER_PAGE}&fetchImages=true&status=live`;
-            const token = pageTokens[pageIndex];
-            if (token) url += `&pageToken=${token}`;
+            const res  = await fetch(`${BLOGGER_API}/posts/${id}?key=${BLOGGER_KEY}&fetchImages=true`);
+            if (!res.ok) throw new Error();
+            const post = await res.json();
+            if (!post) { showError(); return; }
 
-            const res  = await fetch(url);
-            if (!res.ok) throw new Error('Erro ao buscar posts');
-            const data = await res.json();
+            const title   = post.title;
+            const content = post.content;
+            const date    = formatDate(post.published);
+            const author  = post.author?.displayName || 'Orbz';
+            const img     = getFeaturedImage(post);
+            const labels  = post.labels || [];
+            const cat     = labels[0] || 'Artigo';
+            const postUrl = window.location.href;
 
-            loading.style.display = 'none';
+            document.getElementById('page-title').textContent      = `Orbz - ${title}`;
+            document.getElementById('breadcrumb-title').innerHTML   = title;
+            document.getElementById('breadcrumb-cat').textContent   = cat;
+            document.getElementById('post-date').textContent        = date;
+            document.getElementById('post-author').textContent      = author;
+            document.getElementById('post-body').innerHTML          = content;
 
-            if (!data.items || data.items.length === 0) {
-                loading.style.display = 'block';
-                loading.innerHTML = `<p style="color:rgba(255,255,255,0.4);">Nenhum post publicado ainda. Crie seu primeiro post no Blogger!</p>`;
-                return;
+            const plainText = content.replace(/<[^>]*>/g,'').slice(0,160);
+            document.getElementById('meta-description').content     = plainText;
+            document.getElementById('og-title').content             = title;
+            document.getElementById('og-description').content       = plainText;
+            document.getElementById('og-url').content               = postUrl;
+
+            if (img) {
+                document.getElementById('post-featured-img').src    = img;
+                document.getElementById('post-featured-img').alt    = title;
+                document.getElementById('og-image').content         = img;
+                document.getElementById('post-thumb').style.display = 'block';
             }
 
-            data.items.forEach(post => container.insertAdjacentHTML('beforeend', buildPostCard(post)));
-
-            if (data.nextPageToken && !pageTokens[pageIndex + 1]) {
-                pageTokens[pageIndex + 1] = data.nextPageToken;
+            if (labels.length > 0) {
+                document.getElementById('post-tags').innerHTML = labels.map(l =>
+                    `<a href="blog-with-sidebar.html?label=${encodeURIComponent(l)}" style="margin-right:6px;">${l}</a>`
+                ).join('');
+            } else {
+                document.getElementById('post-tags-wrapper').style.display = 'none';
             }
 
-            const hasNext = !!data.nextPageToken;
-            const hasPrev = pageIndex > 0;
-            const pagination = document.getElementById('blog-pagination');
-            pagination.style.display = (hasNext || hasPrev) ? 'block' : 'none';
-            document.getElementById('page-info').textContent = `Página ${pageIndex + 1}`;
-            const btnPrev = document.getElementById('btn-prev');
-            const btnNext = document.getElementById('btn-next');
-            btnPrev.disabled = !hasPrev;
-            btnNext.disabled = !hasNext;
-            btnPrev.style.opacity = hasPrev ? '1' : '0.4';
-            btnNext.style.opacity = hasNext ? '1' : '0.4';
+            document.getElementById('share-linkedin').href =
+                `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(postUrl)}`;
+            document.getElementById('share-whatsapp').href =
+                `https://wa.me/?text=${encodeURIComponent(title + ' — ' + postUrl)}`;
+
+            document.getElementById('post-loading').style.display        = 'none';
+            document.getElementById('post-content-wrapper').style.display = 'block';
 
         } catch (err) {
-            loading.innerHTML = `<p style="color:rgba(255,255,255,0.4);">Não foi possível carregar os artigos.<br><small>${err.message}</small></p>`;
+            showError();
         }
     }
 
@@ -481,9 +485,8 @@
             const data = await res.json();
             if (!data.items) return;
 
-            // Posts recentes
             document.getElementById('sidebar-recent-posts').innerHTML = data.items.slice(0,3).map(p => {
-                const img = getFeaturedImage(p);
+                const img = getFeaturedImage(p) || 'assets/img/blog/1.jpg';
                 return `<li>
                     <div class="thumb"><img src="${img}" alt="${p.title}"></div>
                     <div class="info">
@@ -493,57 +496,29 @@
                 </li>`;
             }).join('');
 
-            // Categorias e Tags via labels
             const labelCount = {};
             data.items.forEach(p => (p.labels || []).forEach(l => {
                 labelCount[l] = (labelCount[l] || 0) + 1;
             }));
             const labelEntries = Object.entries(labelCount);
 
-            const catUl = document.getElementById('sidebar-categories');
-            catUl.innerHTML = labelEntries.length
+            document.getElementById('sidebar-categories').innerHTML = labelEntries.length
                 ? labelEntries.map(([l, c]) => `<li><a href="blog-with-sidebar.html?label=${encodeURIComponent(l)}">${l} <span>${c}</span></a></li>`).join('')
                 : '<li style="color:rgba(255,255,255,0.4);">Nenhuma categoria ainda.</li>';
 
-            const tagUl = document.getElementById('sidebar-tags');
-            tagUl.innerHTML = labelEntries.length
+            document.getElementById('sidebar-tags').innerHTML = labelEntries.length
                 ? labelEntries.map(([l]) => `<li><a href="blog-with-sidebar.html?label=${encodeURIComponent(l)}">${l}</a></li>`).join('')
                 : '<li style="color:rgba(255,255,255,0.4);">Nenhuma tag ainda.</li>';
 
         } catch(e) {}
     }
 
-    function changePage(dir) {
-        const next = currentPage + dir;
-        if (next < 0) return;
-        currentPage = next;
-        loadPosts(currentPage);
-        window.scrollTo({ top: 400, behavior: 'smooth' });
+    function showError() {
+        document.getElementById('post-loading').style.display = 'none';
+        document.getElementById('post-error').style.display   = 'block';
     }
 
-    // Filtro por label via URL
-    const urlParams  = new URLSearchParams(window.location.search);
-    const labelFilter = urlParams.get('label');
-    if (labelFilter) {
-        (async () => {
-            const container = document.getElementById('blog-posts-container');
-            const loading   = document.getElementById('blog-loading');
-            loading.style.display = 'block';
-            try {
-                const res = await fetch(`${BLOGGER_API}/posts?key=${BLOGGER_KEY}&maxResults=${POSTS_PER_PAGE}&fetchImages=true&status=live&labels=${encodeURIComponent(labelFilter)}`);
-                if (!res.ok) throw new Error();
-                const data = await res.json();
-                loading.style.display = 'none';
-                if (data.items) data.items.forEach(p => container.insertAdjacentHTML('beforeend', buildPostCard(p)));
-                else loading.innerHTML = `<p style="color:rgba(255,255,255,0.4);">Nenhum post nessa categoria.</p>`;
-            } catch(e) {
-                loading.innerHTML = `<p style="color:rgba(255,255,255,0.4);">Erro ao filtrar artigos.</p>`;
-            }
-        })();
-    } else {
-        loadPosts(currentPage);
-    }
-
+    loadPost();
     loadSidebar();
     </script>
 
