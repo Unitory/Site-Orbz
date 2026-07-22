@@ -285,3 +285,32 @@ footer .footer-bottom-one .logo img,
     height: 44px !important;
     width: auto !important;
 }
+
+/* =============================================
+   TESTIMONIAL IMAGE — MOBILE FIX
+   ============================================= */
+
+/* Desktop - mantém o efeito de sangria para a esquerda */
+@media (min-width: 992px) {
+    .testimonial-thumb-desktop {
+        margin-left: -150px;
+    }
+
+    .testimonial-thumb-desktop img {
+        max-width: 110%;
+        transform: scale(1.1);
+    }
+}
+
+/* Tablet e mobile - oculta imagem completamente */
+@media (max-width: 991px) {
+    .testimonial-style-one-area .testimonial-thumb {
+        display: none !important;
+    }
+
+    /* Texto ocupa toda largura no mobile */
+    .testimonial-style-one-area .col-lg-6 {
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+}

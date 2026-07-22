@@ -664,8 +664,8 @@
             <div class="container container-stage-lg">
                 <div class="row align-center">
                     <div class="col-lg-6">
-                        <div class="testimonial-thumb image-scale-animation" style="margin-left: -150px;">
-                            <img class="image-scale-animation-item" src="assets/img/illustration/7.png" alt="Image Not Found" style="max-width: 110%; transform: scale(1.1);">
+                        <div class="testimonial-thumb image-scale-animation testimonial-thumb-desktop">
+                            <img class="image-scale-animation-item" src="assets/img/illustration/7.png" alt="Image Not Found">
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -878,75 +878,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
-                        <!-- Single Item -->
-                        <div class="blog-style-one fade-up-anim">
-                            <div class="thumb zoom-thumb">
-                                <a href="blog-motion-branding-2026.html"><img class="img-reveal" src="assets/Blog-motion-branding.png" alt="Motion Branding 2026"></a>
-                            </div>
-                            <div class="info">
-                                <div class="blog-one-meta">
-                                    <ul>
-                                        <li>
-                                            <a href="#">Motion Branding</a>
-                                        </li>
-                                        <li>
-                                            14 Julho, 2026
-                                        </li>
-                                    </ul>
-                                </div>
-                                <h2 class="blog-title">
-                                    <a href="blog-motion-branding-2026.html">Branding em Movimento: Por Que a Sua Marca Precisa Ganhar Vida em 2026</a>
-                                </h2>
-                                <a href="blog-motion-branding-2026.html" class="btn-simple">Leia mais <i class="fas fa-long-arrow-right"></i></a>
-                            </div>
+                        <!-- Loading indicator -->
+                        <div id="home-blog-loading" style="text-align:center; padding: 60px 0; color: rgba(255,255,255,0.5);">
+                            <i class="fas fa-spinner fa-spin" style="font-size: 2rem;"></i>
+                            <p style="margin-top: 16px;">Carregando artigos...</p>
                         </div>
-                        <!-- End Single Item -->
-                        <!-- Single Item -->
-                        <div class="blog-style-one fade-up-anim">
-                            <div class="thumb zoom-thumb">
-                                <a href="chatgpt-work-agente-ia.html"><img class="img-reveal" src="assets/artigos/artigo-13.07.jpg" alt="ChatGPT Work"></a>
-                            </div>
-                            <div class="info">
-                                <div class="blog-one-meta">
-                                    <ul>
-                                        <li>
-                                            <a href="#">Inteligência Artificial</a>
-                                        </li>
-                                        <li>
-                                            13 Julho, 2026
-                                        </li>
-                                    </ul>
-                                </div>
-                                <h2 class="blog-title">
-                                    <a href="chatgpt-work-agente-ia.html">ChatGPT Work: o agente que quer fazer o seu trabalho por você</a>
-                                </h2>
-                                <a href="chatgpt-work-agente-ia.html" class="btn-simple">Leia mais <i class="fas fa-long-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
-                        <!-- Single Item -->
-                        <div class="blog-style-one fade-up-anim">
-                            <div class="thumb zoom-thumb">
-                                <a href="blog-single-with-sidebar.html"><img class="img-reveal" src="assets/Blog-identidade.png" alt="Identidade Visual"></a>
-                            </div>
-                            <div class="info">
-                                <div class="blog-one-meta">
-                                    <ul>
-                                        <li>
-                                            <a href="#">Branding</a>
-                                        </li>
-                                        <li>
-                                            10 Janeiro, 2026
-                                        </li>
-                                    </ul>
-                                </div>
-                                <h2 class="blog-title">
-                                    <a href="blog-single-with-sidebar.html">Por que uma identidade visual forte é o primeiro passo para vender mais</a>
-                                </h2>
-                                <a href="blog-single-with-sidebar.html" class="btn-simple">Leia mais <i class="fas fa-long-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
+
+                        <!-- Blog posts container - will be populated dynamically -->
+                        <div id="home-blog-posts"></div>
                     </div>
                 </div>
             </div>
@@ -1105,6 +1044,96 @@
     <script src="assets/js/ScrollTrigger.min.js"></script>
     <script src="assets/js/SplitText.min.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- Load Recent Blog Posts from Blogger API -->
+    <script>
+    (function() {
+        const BLOGGER_BLOG_ID = '5068025355458924806';
+        const BLOGGER_KEY     = 'AIzaSyCC_uVblsNvy0TxkaU1G5T_BF0n0s5Vn5E';
+        const BLOGGER_API     = `https://www.googleapis.com/blogger/v3/blogs/${BLOGGER_BLOG_ID}`;
+
+        function formatDate(dateStr) {
+            const months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+                          'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+            const date = new Date(dateStr);
+            return `${date.getDate()} ${months[date.getMonth()]}, ${date.getFullYear()}`;
+        }
+
+        function getFirstImage(post) {
+            if (post.images && post.images.length > 0) {
+                return post.images[0].url;
+            }
+            const match = post.content.match(/<img[^>]+src="([^">]+)"/);
+            return match ? match[1] : 'assets/img/placeholder-blog.jpg';
+        }
+
+        function getFirstLabel(post) {
+            return post.labels && post.labels.length > 0 ? post.labels[0] : 'Artigo';
+        }
+
+        function buildPostCard(post) {
+            const imgUrl = getFirstImage(post);
+            const label = getFirstLabel(post);
+            const date = formatDate(post.published);
+            const postUrl = `blog-post.html?id=${post.id}`;
+
+            return `
+                <div class="blog-style-one fade-up-anim">
+                    <div class="thumb zoom-thumb">
+                        <a href="${postUrl}"><img class="img-reveal" src="${imgUrl}" alt="${post.title}"></a>
+                    </div>
+                    <div class="info">
+                        <div class="blog-one-meta">
+                            <ul>
+                                <li>
+                                    <a href="#">${label}</a>
+                                </li>
+                                <li>
+                                    ${date}
+                                </li>
+                            </ul>
+                        </div>
+                        <h2 class="blog-title">
+                            <a href="${postUrl}">${post.title}</a>
+                        </h2>
+                        <a href="${postUrl}" class="btn-simple">Leia mais <i class="fas fa-long-arrow-right"></i></a>
+                    </div>
+                </div>
+            `;
+        }
+
+        async function loadRecentPosts() {
+            const container = document.getElementById('home-blog-posts');
+            const loading = document.getElementById('home-blog-loading');
+
+            if (!container || !loading) return;
+
+            try {
+                const res = await fetch(`${BLOGGER_API}/posts?key=${BLOGGER_KEY}&maxResults=3&fetchImages=true&status=live`);
+                if (!res.ok) throw new Error('Failed to fetch posts');
+
+                const data = await res.json();
+                loading.style.display = 'none';
+
+                if (data.items && data.items.length > 0) {
+                    container.innerHTML = data.items.map(post => buildPostCard(post)).join('');
+                } else {
+                    container.innerHTML = '<p style="text-align:center; color:rgba(255,255,255,0.5);">Nenhum artigo publicado ainda.</p>';
+                }
+            } catch (error) {
+                console.error('Error loading blog posts:', error);
+                loading.innerHTML = '<p style="text-align:center; color:rgba(255,255,255,0.5);">Erro ao carregar artigos.</p>';
+            }
+        }
+
+        // Load posts when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', loadRecentPosts);
+        } else {
+            loadRecentPosts();
+        }
+    })();
+    </script>
 
     <!-- Rastrear clique no WhatsApp como Lead -->
     <script>
